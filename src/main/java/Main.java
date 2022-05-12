@@ -35,8 +35,8 @@ class Main {
         System.out.println(inputString.substring(0, inputString.indexOf(" ")));
         System.out.println(inputString.substring(++lastSpace));
 
-        // replace coffee with tea (case sensitive)
-        System.out.println("replace coffee with tea");
+        // replace coffe with tea (case sensitive)
+        System.out.println("replace coffe with tea");
         System.out.println(inputString.replaceFirst("Coffee", "tea"));
 
         // problem 2, parsing strings into arrays
@@ -67,6 +67,7 @@ class Main {
         // print the longest word in a sentence
         System.out.println("print the longest word in a sentence");
         inputString = "This is the beginning of a whole new adventure";
+
         String[] wordsArray = inputString.split(" ");
         String longestWord = "";
         boolean firstPass = true;
@@ -108,6 +109,30 @@ class Main {
         }
         System.out.println("times letter found in CharArray = " + counterChar);
 
+        // problem 5: filter out a subset
+        // new array with the words that begin with letter j & print
+        System.out.println("new array with the words that begin with letter j & print");
+        inputString = "Jo loves Java and jumping jacks.";
+        wordsArray = inputString.split(" ");
+        String[] newWordsArray;
+        int wordsCounter = 0;
+        System.out.println("input string " + Arrays.toString(wordsArray));
+
+        for (String word : wordsArray) {
+            if (word.substring(0, 1).toUpperCase().equals("J")) {
+                wordsCounter++;
+            }
+        }
+        newWordsArray = new String[wordsCounter];
+        wordsCounter = 0;
+
+        for (String word : wordsArray) {
+            if (word.substring(0, 1).toUpperCase().equals("J")) {
+                newWordsArray[wordsCounter] = word;
+                wordsCounter++;
+            }
+        }
+        System.out.println("words " + Arrays.toString(newWordsArray));
 
     }
 }
