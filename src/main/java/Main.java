@@ -114,7 +114,7 @@ class Main {
         System.out.println("new array with the words that begin with letter j & print");
         inputString = "Jo loves Java and jumping jacks.";
         wordsArray = inputString.split(" ");
-        String[] newWordsArray;
+        //String[] newWordsArray;
         int wordsCounter = 0;
         System.out.println("input string " + Arrays.toString(wordsArray));
 
@@ -123,7 +123,7 @@ class Main {
                 wordsCounter++;
             }
         }
-        newWordsArray = new String[wordsCounter];
+        String[] newWordsArray = new String[wordsCounter];
         wordsCounter = 0;
 
         for (String word : wordsArray) {
